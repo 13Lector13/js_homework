@@ -6,23 +6,23 @@
 
 // Первый вариант:
 
-let rows = 5;
-function drawTriangle(rows) {
+
+function drawTriangle(rows, symbol) {
     for (let i = 0; i < rows; i++) {
         let line = '';
         for (let j = 0; j <= i; j++) {
-            line += '* ';
+            line += symbol + ' ';
         }
         console.log(line);
     }
 }
-drawTriangle(rows)
+drawTriangle(rows, symbol)
 
 //  ---------------------------------------------------------------
 // Второй вариант:
 
 // let rows = 5;
-function drawTriangle(rows) {
+function drawTriangle(rows, symbol) {
     let i = 0;
     // Внешний цикл отвечает за количество строк в треугольнике
     while (i < rows) {
@@ -30,25 +30,30 @@ function drawTriangle(rows) {
         let j = 0;
         // Внутренний цикл добавляет звездочки в строку
         while (j <= i) {
-            line += '* ';
+            line += symbol + ' ';
             j++;
         }
         console.log(line);
         i++;
     }
 }
-drawTriangle(rows)
+drawTriangle(rows, symbol)
 
 
 
 //  -----------------------------------------------------------------------------------------------------------------------------------------------
 // ДЗ 2:
 
+let sum = 0;
 for (i = 0; i <= 100; i++) {
-   if (!(i % 3 === 0)) console.log(i)
+    if (!(i % 3 === 0))
+        sum += i;   
+    // Тут я решение с переменной sum подсмотрел снова у чата GPT. Долго сидел и думал как его сделать. Дошел до варианта i += i и напрочь застрял тут. 
 }
+console.log(sum)
 
-// А тут точно не ок? Я что-то упустил?
+// 3367
+
 
 //  -----------------------------------------------------------------------------------------------------------------------------------------------
 // ДЗ 3:
@@ -61,8 +66,9 @@ for (i = 0; i <= 100; i++) {
 // Выше код - это я не заметил условие про **
 //  ---------------------------------------------------------------
 
-let result = 1;
+
 function pow(x, y) {
+    let result = 1;
     for (i = 0; i < y; i++) {
         result *= x;
     }
