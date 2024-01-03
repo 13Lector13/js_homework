@@ -7,19 +7,13 @@ function funcIsNaN() {
     } else if (a === 0) { 
         console.log('a = ' + a + ' - является числовым значением')
     } else {
-        console.log('a = ' + a + ' - не является числомым значением')
+        console.log('a = ' + a + ' - не является числовым значением')
     }
 }
 funcIsNaN()
 
 // ------------------------------------------------------------------------
 // ДЗ 2:
-
-
-var str = String(str);
-var symbol = String(symbol);
-var amount = Number(amount);
-var bool = Boolean(bool);
 
 function pad(str,symbol,amount,bool) {
     if (bool === true) {
@@ -62,11 +56,12 @@ function checkProbabilityTheory(count) {
         }
     }
 
-    var percent = even / odd * 100;
+    var prcntEven = even * 100 / count;
+    var prcntOdd = odd * 100 / count;
 
     console.log('Количество сгенерированных чисел: ' + count);
     console.log('Количество парных чисел: ' + even);
     console.log('Количество непарных чисел: ' + odd);
-    console.log('Процент парных к непарным: ' + percent + '%');
+    console.log('Процент парных к непарным: ' + prcntEven.toFixed(2) + '%' + ' / ' + prcntOdd.toFixed(2) + '%');
 
 }
