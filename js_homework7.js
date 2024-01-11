@@ -34,12 +34,15 @@ var arr = [
 
 var re = /\w+@(gmail\.com|yahoo\.com)/;
 // \w+\.\w+|\w+@(gmail\.com|yahoo\.com)
+
 var trueEmailArr = [];
 
 for (var i in arr) {
     if (re.test(arr[i].email)) {
-        trueEmailArr.push(arr[i]);
+        trueEmailArr.push(arr[i].email);
     }
 }
 
 console.log(trueEmailArr);
+
+
